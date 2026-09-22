@@ -1,23 +1,84 @@
 aid: suitecrm
+
 name: SuiteCRM
-description: 'SuiteCRM is a company surfaced via the API Evangelist harvest backlog (source: crm) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://suitecrm.com/wp-content/uploads/2018/01/favicon-144-1.png
+
+description: "SuiteCRM is the world’s #1 open source CRM, offering self‑hosted deployments for full data sovereignty and a hosted SaaS option with no licence fees. It provides a flexible data model, robust reporting, and extensive customization for sales, marketing, and support teams. The platform supports on‑premise installations as well as SuiteCRM Hosted, delivering enterprise‑grade features without vendor lock‑in."
+
 url: https://raw.githubusercontent.com/api-evangelist/suitecrm/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:crm
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-21'
+
 modified: '2026-09-21'
+
 tags:
-- Company
-apis: []
+- CRM
+- OpenSource
+- SaaS
+- SelfHosted
+- Enterprise
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: https://suitecrm.com/security-policy/security/
+- type: Newsroom
+  url: https://suitecrm.com/category/news/
+- type: Login
+  url: https://suitecrm.com/login/
+- type: GitHubOrganization
+  url: https://github.com/SuiteCRM
+- type: ChangeLog
+  url: https://suitecrm.com/releases/
+- type: Blog
+  url: https://suitecrm.com/hacktoberfest-2022-x-suitecrm/blog/
+- type: DomainSecurity
+  url: security/suitecrm-domain-security.yml
 - type: Website
   url: https://suitecrm.com/
+- type: Documentation
+  url: https://suitecrm.com/what-is-suitecrm/
+- type: GettingStarted
+  url: https://suitecrm.com/download/
+- type: Roadmap
+  url: https://suitecrm.com/suitecrm-roadmap/
+- type: Pricing
+  url: https://suitecrm.com/suitecrmhosted/
+- type: TermsOfService
+  url: https://suitecrm.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://suitecrm.com/privacy-policy/
+- type: Support
+  url: https://suitecrm.com/contact-us/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are served as HTML shells with no machine‑readable OpenAPI spec.
+  evidence:
+    - url: https://docs.suitecrm.com/
+      status: 200
+  checked: 2026-09-21
+x-enrichment:
+  date: '2026-09-21'
+  status: enriched
+  artifacts_added: 3
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
