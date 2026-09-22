@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/suitecrm/main/json-schema/suitecrm-post-api-access-token-response-schema.json",
+  "title": "PostApiAccessTokenResponse",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/suitecrm-openapi-generated.yml#/components/schemas/PostApiAccessTokenResponse",
+  "type": "object",
+  "properties": {
+    "token_type": {
+      "type": "string",
+      "description": "Typically \"Bearer\""
+    },
+    "expires_in": {
+      "type": "integer",
+      "description": "Lifetime of the access token in seconds"
+    },
+    "access_token": {
+      "type": "string",
+      "description": "JWT access token"
+    },
+    "refresh_token": {
+      "type": "string",
+      "description": "Refresh token for obtaining new access tokens"
+    }
+  }
+}

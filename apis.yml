@@ -1,40 +1,45 @@
 aid: suitecrm
-
 name: SuiteCRM
-
 image: https://suitecrm.com/wp-content/uploads/2018/01/favicon-144-1.png
-
-description: "SuiteCRM is the world’s #1 open source CRM, offering self‑hosted deployments for full data sovereignty and a hosted SaaS option with no licence fees. It provides a flexible data model, robust reporting, and extensive customization for sales, marketing, and support teams. The platform supports on‑premise installations as well as SuiteCRM Hosted, delivering enterprise‑grade features without vendor lock‑in."
-
+description: 'SuiteCRM is the world’s #1 open source CRM, offering self‑hosted deployments for full data sovereignty and a hosted SaaS option
+  with no licence fees. It provides a flexible data model, robust reporting, and extensive customization for sales, marketing, and support teams.
+  The platform supports on‑premise installations as well as SuiteCRM Hosted, delivering enterprise‑grade features without vendor lock‑in.'
 url: https://raw.githubusercontent.com/api-evangelist/suitecrm/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:crm
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-21 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-21'
-
 modified: '2026-09-21'
-
 tags:
+- CRM
+- Open-Source
+- Software-as-a-Service
+- Self-Hosted
+- Enterprise
+tags_raw:
 - CRM
 - OpenSource
 - SaaS
 - SelfHosted
 - Enterprise
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
+- type: Spectral
+  url: rules/suitecrm-rules.yml
+- type: JSONLD
+  url: json-ld/suitecrm-context.jsonld
+- type: Vocabulary
+  url: vocabulary/suitecrm-vocabulary.yml
+- type: DataModel
+  url: data-model/suitecrm-data-model.yml
+- type: Conformance
+  url: conformance/suitecrm-conformance.yml
 - type: Security
   url: https://suitecrm.com/security-policy/security/
 - type: Newsroom
@@ -65,16 +70,35 @@ common:
   url: https://suitecrm.com/privacy-policy/
 - type: Support
   url: https://suitecrm.com/contact-us/
-
-apis: []
-
+apis:
+- aid: suitecrm:suitecrm-api
+  name: SuiteCRM API
+  description: 'SuiteCRM API as documented publicly: 19 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
+    not the provider''s own document.'
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/suitecrm-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
   detail: Documentation pages are served as HTML shells with no machine‑readable OpenAPI spec.
   evidence:
-    - url: https://docs.suitecrm.com/
-      status: 200
+  - url: https://docs.suitecrm.com/
+    status: 200
   checked: 2026-09-21
 x-enrichment:
   date: '2026-09-21'

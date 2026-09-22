@@ -1,0 +1,79 @@
+{
+  "@context": {
+    "@vocab": "https://suitecrm.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "suitecrm": "https://suitecrm.com/schema#",
+    "PatchApiV8ModuleRequest": "suitecrm:PatchApiV8ModuleRequest",
+    "data.type": {
+      "@id": "suitecrm:data.type",
+      "@type": "xsd:string"
+    },
+    "data.id": {
+      "@id": "suitecrm:data.id",
+      "@type": "xsd:string"
+    },
+    "data.attributes": {
+      "@id": "suitecrm:data.attributes",
+      "@type": "xsd:string"
+    },
+    "PostApiV8ModuleRequest": "suitecrm:PostApiV8ModuleRequest",
+    "PostApiV8ModuleAccountsIdRelationshipsContactsRequest": "suitecrm:PostApiV8ModuleAccountsIdRelationshipsContactsRequest",
+    "PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest": "suitecrm:PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest",
+    "PostApiAccessTokenRequest": "suitecrm:PostApiAccessTokenRequest",
+    "grant_type": {
+      "@id": "suitecrm:grant_type",
+      "@type": "xsd:string"
+    },
+    "client_id": {
+      "@id": "suitecrm:client_id",
+      "@type": "xsd:string"
+    },
+    "client_secret": {
+      "@id": "suitecrm:client_secret",
+      "@type": "xsd:string"
+    },
+    "username": {
+      "@id": "suitecrm:username",
+      "@type": "xsd:string"
+    },
+    "password": {
+      "@id": "suitecrm:password",
+      "@type": "xsd:string"
+    },
+    "code": {
+      "@id": "suitecrm:code",
+      "@type": "xsd:string"
+    },
+    "redirect_uri": {
+      "@id": "suitecrm:redirect_uri",
+      "@type": "xsd:string"
+    },
+    "refresh_token": {
+      "@id": "suitecrm:refresh_token",
+      "@type": "xsd:string"
+    },
+    "PostApiAccessTokenResponse": "suitecrm:PostApiAccessTokenResponse",
+    "token_type": {
+      "@id": "suitecrm:token_type",
+      "@type": "xsd:string"
+    },
+    "expires_in": {
+      "@id": "suitecrm:expires_in",
+      "@type": "xsd:integer"
+    },
+    "access_token": {
+      "@id": "suitecrm:access_token",
+      "@type": "xsd:string"
+    },
+    "GetApiAuthorizeResponse": "suitecrm:GetApiAuthorizeResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "SuiteCRM API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects SuiteCRM's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-09-22) from openapi/_ae-authored/suitecrm-openapi-generated.yml.",
+  "dcterms:created": "2026-09-22",
+  "dcterms:source": [
+    "openapi/_ae-authored/suitecrm-openapi-generated.yml"
+  ]
+}

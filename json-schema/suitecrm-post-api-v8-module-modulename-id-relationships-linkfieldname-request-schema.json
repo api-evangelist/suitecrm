@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/suitecrm/main/json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json",
+  "title": "PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/suitecrm-openapi-generated.yml#/components/schemas/PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest",
+  "type": "object",
+  "properties": {
+    "data.type": {
+      "type": "string",
+      "description": "Related module name (e.g., Contacts)."
+    },
+    "data.id": {
+      "type": "string",
+      "description": "ID of the record to link."
+    }
+  },
+  "required": [
+    "data.type",
+    "data.id"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/suitecrm/main/json-schema/suitecrm-post-api-v8-module-request-schema.json",
+  "title": "PostApiV8ModuleRequest",
+  "x-generated": "2026-09-22",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/suitecrm-openapi-generated.yml#/components/schemas/PostApiV8ModuleRequest",
+  "type": "object",
+  "properties": {
+    "data.type": {
+      "type": "string",
+      "description": "Module name (e.g., Lead)."
+    },
+    "data.attributes": {
+      "type": "string",
+      "description": "Attributes for the new record (e.g., last_name, status)."
+    }
+  },
+  "required": [
+    "data.type",
+    "data.attributes"
+  ]
+}
