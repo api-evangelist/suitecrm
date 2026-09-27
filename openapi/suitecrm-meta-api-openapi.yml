@@ -1,0 +1,53 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Meta API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Meta
+paths:
+  /Api/V8/meta/fields/{moduleName}:
+    get:
+      operationId: get_Api_V8_meta_fields_moduleName
+      tags:
+      - Meta
+      summary: List Module Fields
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+  /Api/V8/meta/modules:
+    get:
+      operationId: get_Api_V8_meta_modules
+      tags:
+      - Meta
+      summary: List All Modules (GET)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      responses:
+        '200':
+          description: Success (status as documented)
+  /Api/V8/meta/swagger.json:
+    get:
+      operationId: get_Api_V8_meta_swagger_json
+      tags:
+      - Meta
+      summary: Get Swagger Schema
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      responses:
+        '200':
+          description: Success (status as documented)

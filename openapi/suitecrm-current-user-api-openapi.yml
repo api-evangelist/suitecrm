@@ -1,0 +1,27 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Current User API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Current User
+paths:
+  /Api/V8/current-user:
+    get:
+      operationId: get_Api_V8_current_user
+      tags:
+      - Current User
+      summary: Get Current User (GET)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      responses:
+        '200':
+          description: Success (status as documented)

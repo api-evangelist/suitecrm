@@ -1,0 +1,85 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Access Token API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Access Token
+paths:
+  /Api/access_token:
+    post:
+      operationId: post_Api_access_token
+      tags:
+      - Access Token
+      summary: Authentication
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiAccessTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiAccessTokenResponse'
+components:
+  schemas:
+    PostApiAccessTokenResponse:
+      type: object
+      properties:
+        token_type:
+          type: string
+          description: Typically "Bearer"
+        expires_in:
+          type: integer
+          description: Lifetime of the access token in seconds
+        access_token:
+          type: string
+          description: JWT access token
+        refresh_token:
+          type: string
+          description: Refresh token for obtaining new access tokens
+    PostApiAccessTokenRequest:
+      type: object
+      properties:
+        grant_type:
+          type: string
+          description: One of "client_credentials", "password", "authorization_code", or "refresh_token"
+        client_id:
+          type: string
+          description: The client UUID
+        client_secret:
+          type: string
+          description: The client secret
+        username:
+          type: string
+          description: CRM username (required for password grant)
+        password:
+          type: string
+          description: CRM password (required for password grant)
+        code:
+          type: string
+          description: Authorization code (required for authorization_code grant)
+        redirect_uri:
+          type: string
+          description: Redirect URI (required for authorization_code grant)
+        refresh_token:
+          type: string
+          description: Refresh token (required for refresh_token grant)
+      required:
+      - grant_type
+      - client_id
+      - client_secret

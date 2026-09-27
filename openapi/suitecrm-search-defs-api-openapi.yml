@@ -1,0 +1,33 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Search Defs API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Search Defs
+paths:
+  /Api/V8/search-defs/module/{moduleName}:
+    get:
+      operationId: get_Api_V8_search_defs_module_moduleName
+      tags:
+      - Search Defs
+      summary: Get Search Definitions
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)

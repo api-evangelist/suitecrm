@@ -1,0 +1,58 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Authorize API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Authorize
+paths:
+  /Api/authorize:
+    get:
+      operationId: get_Api_authorize
+      tags:
+      - Authorize
+      summary: Authentication
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/authentication
+      parameters:
+      - name: response_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Must be set to "code"
+      - name: client_id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The client UUID
+      - name: redirect_uri
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The redirect URI registered for the client
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetApiAuthorizeResponse'
+components:
+  schemas:
+    GetApiAuthorizeResponse:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Authorization code returned via redirect

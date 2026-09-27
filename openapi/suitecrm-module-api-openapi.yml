@@ -1,0 +1,299 @@
+openapi: 3.2.0
+info:
+  title: SuiteCRM Module API
+  version: '2026-09-22'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-22: 19 operation(s) read from 2 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; SuiteCRM has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-22'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  - https://docs.suitecrm.com/developer/integration-api/v8/authentication
+tags:
+- name: Module
+paths:
+  /Api/V8/module:
+    patch:
+      operationId: patch_Api_V8_module
+      tags:
+      - Module
+      summary: Update Record (PATCH)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchApiV8ModuleRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+    post:
+      operationId: post_Api_V8_module
+      tags:
+      - Module
+      summary: Create Record (POST)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV8ModuleRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+  /Api/V8/module/Accounts/{id}/relationships/contacts:
+    post:
+      operationId: post_Api_V8_module_Accounts_id_relationships_contacts
+      tags:
+      - Module
+      summary: Link Records (POST)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV8ModuleAccountsIdRelationshipsContactsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+  /Api/V8/module/{moduleName}:
+    get:
+      operationId: get_Api_V8_module_moduleName
+      tags:
+      - Module
+      summary: List Records (GET)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: fields[Module]
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Comma-separated list of fields (e.g., fields[Accounts]=name,billing_address_city ).
+      - name: page[number]
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The page index (starts at 1).
+      - name: page[size]
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Number of records per page.
+      - name: sort
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Sort field. Use - for descending (e.g., sort=-date_entered ).
+      - name: filter
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Advanced filtering logic (e.g., filter[name][eq]=Acme ).
+      responses:
+        '200':
+          description: Success (status as documented)
+  /Api/V8/module/{moduleName}/{id}:
+    delete:
+      operationId: delete_Api_V8_module_moduleName_id
+      tags:
+      - Module
+      summary: Delete Record (DELETE)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+    get:
+      operationId: get_Api_V8_module_moduleName_id
+      tags:
+      - Module
+      summary: Fetch Single Record (GET)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+  /Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName}:
+    get:
+      operationId: get_Api_V8_module_moduleName_id_relationships_linkFieldName
+      tags:
+      - Module
+      summary: Get Related Records (GET)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: linkFieldName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+    post:
+      operationId: post_Api_V8_module_moduleName_id_relationships_linkFieldName
+      tags:
+      - Module
+      summary: Link Records (POST)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: linkFieldName
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+  /Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName}/{relatedBeanId}:
+    delete:
+      operationId: delete_Api_V8_module_moduleName_id_relationships_linkFieldName_relatedBeanId
+      tags:
+      - Module
+      summary: Unlink Records (DELETE)
+      x-source: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+      parameters:
+      - name: moduleName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: linkFieldName
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: relatedBeanId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+components:
+  schemas:
+    PostApiV8ModuleModulenameIdRelationshipsLinkfieldnameRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: Related module name (e.g., Contacts).
+        data.id:
+          type: string
+          description: ID of the record to link.
+      required:
+      - data.type
+      - data.id
+    PostApiV8ModuleAccountsIdRelationshipsContactsRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: Related module name (e.g., Contacts).
+        data.id:
+          type: string
+          description: ID of the record to link.
+      required:
+      - data.type
+      - data.id
+    PostApiV8ModuleRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: Module name (e.g., Lead).
+        data.attributes:
+          type: string
+          description: Attributes for the new record (e.g., last_name, status).
+      required:
+      - data.type
+      - data.attributes
+    PatchApiV8ModuleRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: Module name (e.g., Accounts).
+        data.id:
+          type: string
+          description: ID of the record to update.
+        data.attributes:
+          type: string
+          description: Attributes to update (e.g., name).
+      required:
+      - data.type
+      - data.id
+      - data.attributes

@@ -14,7 +14,7 @@ created: '2026-09-21'
 modified: '2026-09-21'
 tags:
 - CRM
-- Open-Source
+- Open Source
 - Software-as-a-Service
 - Self-Hosted
 - Enterprise
@@ -24,6 +24,7 @@ tags_raw:
 - SaaS
 - SelfHosted
 - Enterprise
+- Open-Source
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -71,15 +72,15 @@ common:
 - type: Support
   url: https://suitecrm.com/contact-us/
 apis:
-- aid: suitecrm:suitecrm-api
-  name: SuiteCRM API
-  description: 'SuiteCRM API as documented publicly: 19 operations. Contract generated from the documentation by API Evangelist (2026-09-22);
-    not the provider''s own document.'
+- aid: suitecrm:suitecrm-access-token-api
+  name: SuiteCRM Access Token API
+  description: The Access Token API from SuiteCRM — 1 operation(s) for access token.
   humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Access Token
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/suitecrm-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/suitecrm-access-token-api-openapi.yml
   - type: JSONSchema
     url: json-schema/suitecrm-post-api-access-token-request-schema.json
   - type: JSONSchema
@@ -89,9 +90,195 @@ apis:
   - type: JSONSchema
     url: json-schema/suitecrm-post-api-v8-module-request-schema.json
   - type: JSONSchema
-    url: json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
   - type: JSONSchema
-    url: json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-authorize-api
+  name: SuiteCRM Authorize API
+  description: The Authorize API from SuiteCRM — 1 operation(s) for authorize.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Authorize
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-authorize-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-current-user-api
+  name: SuiteCRM Current User API
+  description: The Current User API from SuiteCRM — 1 operation(s) for current user.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Current User
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-current-user-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-listview-api
+  name: SuiteCRM Listview API
+  description: The Listview API from SuiteCRM — 1 operation(s) for listview.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Listview
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-listview-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-logout-api
+  name: SuiteCRM Logout API
+  description: The Logout API from SuiteCRM — 1 operation(s) for logout.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Logout
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-logout-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-meta-api
+  name: SuiteCRM Meta API
+  description: The Meta API from SuiteCRM — 3 operation(s) for meta.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Meta
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-meta-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-module-api
+  name: SuiteCRM Module API
+  description: The Module API from SuiteCRM — 6 operation(s) for module.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Module
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-module-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-search-defs-api
+  name: SuiteCRM Search Defs API
+  description: The Search Defs API from SuiteCRM — 1 operation(s) for search defs.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - Search Defs
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-search-defs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
+- aid: suitecrm:suitecrm-user-preferences-api
+  name: SuiteCRM User Preferences API
+  description: The User Preferences API from SuiteCRM — 1 operation(s) for user preferences.
+  humanURL: https://docs.suitecrm.com/developer/integration-api/v8/endpoints
+  tags:
+  - User Preferences
+  properties:
+  - type: OpenAPI
+    url: openapi/suitecrm-user-preferences-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-access-token-response-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-patch-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: json-schema/suitecrm-post-api-v8-module-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-accounts-id-relationships-contacts-request-schema.json
+  - type: JSONSchema
+    url: >-
+      json-schema/suitecrm-post-api-v8-module-modulename-id-relationships-linkfieldname-request-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
