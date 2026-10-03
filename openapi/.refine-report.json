@@ -48,7 +48,17 @@
     "suitecrm-openapi-generated.yml: declared missing tag: Module",
     "suitecrm-openapi-generated.yml: declared missing tag: Search Defs",
     "suitecrm-openapi-generated.yml: declared missing tag: User Preferences",
-    "apis.yml register: written (+9 apis, 9 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "suitecrm-access-token-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-authorize-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-current-user-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-listview-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-logout-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-meta-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-module-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-search-defs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "suitecrm-user-preferences-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

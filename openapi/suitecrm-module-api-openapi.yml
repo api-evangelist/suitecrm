@@ -269,18 +269,6 @@ components:
       required:
       - data.type
       - data.id
-    PostApiV8ModuleRequest:
-      type: object
-      properties:
-        data.type:
-          type: string
-          description: Module name (e.g., Lead).
-        data.attributes:
-          type: string
-          description: Attributes for the new record (e.g., last_name, status).
-      required:
-      - data.type
-      - data.attributes
     PatchApiV8ModuleRequest:
       type: object
       properties:
@@ -296,4 +284,16 @@ components:
       required:
       - data.type
       - data.id
+      - data.attributes
+    PostApiV8ModuleRequest:
+      type: object
+      properties:
+        data.type:
+          type: string
+          description: Module name (e.g., Lead).
+        data.attributes:
+          type: string
+          description: Attributes for the new record (e.g., last_name, status).
+      required:
+      - data.type
       - data.attributes

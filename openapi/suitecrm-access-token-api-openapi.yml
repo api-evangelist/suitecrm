@@ -37,21 +37,6 @@ paths:
                 $ref: '#/components/schemas/PostApiAccessTokenResponse'
 components:
   schemas:
-    PostApiAccessTokenResponse:
-      type: object
-      properties:
-        token_type:
-          type: string
-          description: Typically "Bearer"
-        expires_in:
-          type: integer
-          description: Lifetime of the access token in seconds
-        access_token:
-          type: string
-          description: JWT access token
-        refresh_token:
-          type: string
-          description: Refresh token for obtaining new access tokens
     PostApiAccessTokenRequest:
       type: object
       properties:
@@ -83,3 +68,18 @@ components:
       - grant_type
       - client_id
       - client_secret
+    PostApiAccessTokenResponse:
+      type: object
+      properties:
+        token_type:
+          type: string
+          description: Typically "Bearer"
+        expires_in:
+          type: integer
+          description: Lifetime of the access token in seconds
+        access_token:
+          type: string
+          description: JWT access token
+        refresh_token:
+          type: string
+          description: Refresh token for obtaining new access tokens
